@@ -55,7 +55,7 @@ public class PlayFairCipher extends AppCompatActivity {
                 }
                 else
                 {
-                    PFEncryption pfEncryption=new PFEncryption();
+                    PFEncryption1 pfEncryption=new PFEncryption1();
                     pfEncryption.makeArray(Key);
                     String msg=pfEncryption.manageMessage(plainText);
                     pfEncryption.doPlayFair(msg, "Encrypt");
@@ -66,7 +66,7 @@ public class PlayFairCipher extends AppCompatActivity {
                 }
             }
 
-            class PFEncryption{
+            class PFEncryption1{
 
                 private char [][] alphabets= new char[5][5];
                 private char[] uniqueChar= new char[26];
@@ -120,6 +120,7 @@ public class PlayFairCipher extends AppCompatActivity {
 
                 String manageMessage(String msg){
                     int val=0;
+                    msg = msg.replaceAll("\\s", "");
                     int len=msg.length()-2;
                     String newTxt="";
                     String intermediate="";
@@ -177,7 +178,7 @@ public class PlayFairCipher extends AppCompatActivity {
                             col1=0;
                         if (col2>4)
                             col2=0;
-                        encrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row1][col2]));
+                        encrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row1][col2]);
                     }else if(col1==col2){
                         row1=row1+1;
                         row2=row2+1;
@@ -185,9 +186,9 @@ public class PlayFairCipher extends AppCompatActivity {
                             row1=0;
                         if (row2>4)
                             row2=0;
-                        encrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row2][col1]));
+                        encrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row2][col1]);
                     }else{
-                        encrypted+=(Character.toString(alphabets[row1][col2])+Character.toString(alphabets[row2][col1]));
+                        encrypted+=(Character.toString(alphabets[row1][col2])+ alphabets[row2][col1]);
                     }
                 }
 
@@ -199,7 +200,7 @@ public class PlayFairCipher extends AppCompatActivity {
                             col1=4;
                         if (col2<0)
                             col2=4;
-                        decrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row1][col2]));
+                        decrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row1][col2]);
                     }else if(col1==col2){
                         row1=row1-1;
                         row2=row2-1;
@@ -207,9 +208,9 @@ public class PlayFairCipher extends AppCompatActivity {
                             row1=4;
                         if (row2<0)
                             row2=4;
-                        decrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row2][col1]));
+                        decrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row2][col1]);
                     }else{
-                        decrypted+=(Character.toString(alphabets[row1][col2])+Character.toString(alphabets[row2][col1]));
+                        decrypted+=(Character.toString(alphabets[row1][col2])+ alphabets[row2][col1]);
                     }
                 }
 
@@ -239,7 +240,7 @@ public class PlayFairCipher extends AppCompatActivity {
                 }
                 else
                 {
-                    PFEncryption pfEncryption=new PFEncryption();
+                    PFEncryption1 pfEncryption=new PFEncryption1();
                     pfEncryption.makeArray(Key);
                     String msg=pfEncryption.manageMessage(plainText);
                     pfEncryption.doPlayFair(msg, "Decrypt");
@@ -251,7 +252,7 @@ public class PlayFairCipher extends AppCompatActivity {
 
             }
 
-            class PFEncryption{
+            class PFEncryption1{
 
                 private char [][] alphabets= new char[5][5];
                 private char[] uniqueChar= new char[26];
@@ -305,6 +306,7 @@ public class PlayFairCipher extends AppCompatActivity {
 
                 String manageMessage(String msg){
                     int val=0;
+                    msg = msg.replaceAll("\\s", "");
                     int len=msg.length()-2;
                     String newTxt="";
                     String intermediate="";
@@ -362,7 +364,7 @@ public class PlayFairCipher extends AppCompatActivity {
                             col1=0;
                         if (col2>4)
                             col2=0;
-                        encrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row1][col2]));
+                        encrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row1][col2]);
                     }else if(col1==col2){
                         row1=row1+1;
                         row2=row2+1;
@@ -370,9 +372,9 @@ public class PlayFairCipher extends AppCompatActivity {
                             row1=0;
                         if (row2>4)
                             row2=0;
-                        encrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row2][col1]));
+                        encrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row2][col1]);
                     }else{
-                        encrypted+=(Character.toString(alphabets[row1][col2])+Character.toString(alphabets[row2][col1]));
+                        encrypted+=(Character.toString(alphabets[row1][col2])+ alphabets[row2][col1]);
                     }
                 }
 
@@ -384,7 +386,7 @@ public class PlayFairCipher extends AppCompatActivity {
                             col1=4;
                         if (col2<0)
                             col2=4;
-                        decrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row1][col2]));
+                        decrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row1][col2]);
                     }else if(col1==col2){
                         row1=row1-1;
                         row2=row2-1;
@@ -392,9 +394,9 @@ public class PlayFairCipher extends AppCompatActivity {
                             row1=4;
                         if (row2<0)
                             row2=4;
-                        decrypted+=(Character.toString(alphabets[row1][col1])+Character.toString(alphabets[row2][col1]));
+                        decrypted+=(Character.toString(alphabets[row1][col1])+ alphabets[row2][col1]);
                     }else{
-                        decrypted+=(Character.toString(alphabets[row1][col2])+Character.toString(alphabets[row2][col1]));
+                        decrypted+=(Character.toString(alphabets[row1][col2])+ alphabets[row2][col1]);
                     }
                 }
 
