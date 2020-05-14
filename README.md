@@ -1,6 +1,6 @@
 # Cryptography-project-
 
-TO DOWNLOAD THE APK PLEASE CLICK THE LINK BELOW-------
+TO DOWNLOAD THE APK PLEASE CLICK THE LINK BELOW (it will not open in desktop)-------
   https://drive.google.com/open?id=1KcGxNM_vLRULes-0SCxMYP5RTR9_5fF0
 
 It is a Information Security poject based on mobile Apllication.
