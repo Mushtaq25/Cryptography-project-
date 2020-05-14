@@ -1,7 +1,10 @@
 # Cryptography-project-
 
+TO DOWNLOAD THE APK PLEASE CLICK THE LINK BELOW-------
+  https://drive.google.com/open?id=1AWEBS_Hig2ls2BKeKQvgq7QMCXL82Nv3
+
 It is a Information Security poject based on mobile Apllication.
-I have design a Mobile Aplication Which will run On Android 10 and above
+I have design a Mobile Aplication Which will run On Android 9 and above
 
 For the code Section and the Algorithm of the above ciphers please GO-TO path--
   Cryptography-project-/app/src/main/java/com/example/cryptography/
@@ -17,3 +20,12 @@ It contains Three Encryption/Decryption Techniques:-
   3.DES cipher.
   
 After clicking any one of this You have to provide your messege and a KEY to encrypt your messege
+
+The code/Algorithm for DES cipher is copied from reference link---
+  https://www.geeksforgeeks.org/data-encryption-standard-des-set-1/
+
+NOTE- while installing the apk it will ask for some permission please ALLOW it since it is not published in play store so it will show it from UNKNOWN publisher
+
+
+CONTACT US== 
+            If you face any problem while intsalling the apk please let us know at following Email address== islammushtaq@gmail.com
